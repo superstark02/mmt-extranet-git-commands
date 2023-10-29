@@ -15,11 +15,19 @@
     "commands": [
       {
         "command": "mmt-extranet-git-commands.git_new_push",
-        "title": "Git Create Commit and Push"
+        "title": "MMT: Git Create Commit and Push"
       },
       {
         "command": "mmt-extranet-git-commands.git_amend_commit",
-        "title": "Git Amend Commit"
+        "title": "MMT: Git Amend Commit"
+      },
+      {
+        "command": "mmt-extranet-git-commands.git_merge_in_release",
+        "title": "MMT: Git Merge Feature Branch In Release"
+      },
+      {
+        "command": "mmt-extranet-git-commands.git_merge_in_integration",
+        "title": "MMT: Git Send a Message"
       }
     ]
   },
