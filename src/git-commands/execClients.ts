@@ -5,7 +5,11 @@ import { strings, messageTypes } from "../constants/constants";
 import { abort } from "node:process";
 import { git_commands } from "./commands";
 
-export const takeInput = (type: "branch" | "message", handler: Function) =>
+export const takeInput = (
+  type: "branch" | "message",
+  defaultValue: string = "",
+  handler: Function
+) =>
   window
     .showInputBox({
       ignoreFocusOut: false,
@@ -13,6 +17,7 @@ export const takeInput = (type: "branch" | "message", handler: Function) =>
         type === messageTypes.branch
           ? strings.branch_placeholder
           : strings.message_placeholder,
+      value: type === "message" ? defaultValue + " | " : defaultValue,
     })
     .then((value) => {
       if (!value) {
