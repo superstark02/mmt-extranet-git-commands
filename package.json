@@ -19,15 +19,15 @@
       },
       {
         "command": "mmt-extranet-git-commands.git_amend_commit",
-        "title": "MMT: Git Amend Commit"
+        "title": "MMT: Git Amend Commit And Push"
       },
       {
         "command": "mmt-extranet-git-commands.git_merge_in_release",
-        "title": "MMT: Git Merge Feature Branch In Release"
+        "title": "MMT: Git Merge This Branch With Release And Push"
       },
       {
         "command": "mmt-extranet-git-commands.git_merge_in_integration",
-        "title": "MMT: Git Send a Message"
+        "title": "MMT: Git Merge This Branch With Integration And Push"
       }
     ]
   },

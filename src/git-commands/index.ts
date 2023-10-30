@@ -71,3 +71,6 @@ export const gitMergeInIntegration = commands.registerCommand(
     });
   }
 );
+
+//new branch
+//open link for pushed commit

@@ -13,7 +13,7 @@ export const strings = {
   getting_branch: "Getting branch name",
 };
 
-export const pathToBranch = "origin/for/";
+export const pathToBranch = "origin HEAD:refs/for/";
 
 export const branchNames = {
   release: "release",
