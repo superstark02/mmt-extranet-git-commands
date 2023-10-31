@@ -26,8 +26,12 @@
         "title": "MMT: Git Merge This Branch With Release And Push"
       },
       {
-        "command": "mmt-extranet-git-commands.git_merge_in_integration",
-        "title": "MMT: Git Merge This Branch With Integration And Push"
+        "command": "mmt-extranet-git-commands.git_create_new_branch_from_release",
+        "title": "MMT: Git Create New Branch from Release"
+      },
+      {
+        "command": "mmt-extranet-git-commands.git_create_new_branch",
+        "title": "MMT: Git Create New Branch From Custom Branch"
       }
     ]
   },

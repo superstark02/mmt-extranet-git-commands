@@ -11,4 +11,6 @@ export const git_commands = {
   git_pull_rebase: "git pull --rebase",
   git_merge: (branch: string) => `git merge ${branch}`,
   git_get_current_branch: "git rev-parse --abbrev-ref HEAD",
+  git_create_new_branch: (newBranch: string, fromBranch: string) =>
+    `git checkout -b ${newBranch} ${fromBranch}`,
 };

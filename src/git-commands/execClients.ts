@@ -6,29 +6,25 @@ import { abort } from "node:process";
 import { git_commands } from "./commands";
 
 export const takeInput = (
-  type: "branch" | "message",
+  placeHolder: string = "",
   defaultValue: string = "",
   handler: Function
 ) =>
   window
     .showInputBox({
       ignoreFocusOut: false,
-      placeHolder:
-        type === messageTypes.branch
-          ? strings.branch_placeholder
-          : strings.message_placeholder,
-      value: type === "message" ? defaultValue + " | " : defaultValue,
+      placeHolder: placeHolder,
+      value: defaultValue,
     })
     .then((value) => {
       if (!value) {
-        window.showErrorMessage(
-          type === messageTypes.branch ? strings.no_branch : strings.no_message
-        );
+        window.showErrorMessage(strings.no_input);
         return;
       }
       handler(value);
       return;
     });
+
 export const execCommand = (cmd: string, successMessage: string) =>
   childProcess.exec(commandAdapter(cmd), (e, stdout) => {
     if (e) {
