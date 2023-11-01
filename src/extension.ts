@@ -1,6 +1,9 @@
 import * as vscode from "vscode";
 import {
   gitAmendCommit,
+  gitCreateNewBranch,
+  gitCreateNewBranchFromRelease,
+  gitMergeInExisingBranch,
   gitMergeInIntegration,
   gitMergeInRelease,
   gitPushNewCommit,
@@ -11,6 +14,9 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitAmendCommit);
   context.subscriptions.push(gitMergeInRelease);
   context.subscriptions.push(gitMergeInIntegration);
+  context.subscriptions.push(gitMergeInExisingBranch);
+  context.subscriptions.push(gitCreateNewBranchFromRelease);
+  context.subscriptions.push(gitCreateNewBranch);
 }
 
 export function deactivate() {}

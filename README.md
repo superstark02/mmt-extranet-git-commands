@@ -1,22 +1,73 @@
-# mmt-extranet-git-commands README
+# MMT Extranet Git Commands
 
-This is the README for the extension "mmt-extranet-git-commands".
+This extension combines git commands to avoid mistakes in handling git.
 
-## Features
+## Commands
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The commands are described below:
 
-For example if there is an image subfolder under your extension project workspace:
+> MMT: Git Create Commit and Push
 
-\!\[feature X\]\(images/feature-x.png\)
+<pre><code>
+    git add .
+    git commit -m <span style='color:yellow'>your message</span>
+    git push origin HEAD:refs/for/<span style='color:yellow'>your current branch</span>
+</code></pre>
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> MMT: Git Amend Commit And Push
 
-## Requirements
+<pre><code>
+    git add .
+    git commit --amend
+    git push origin HEAD:refs/for/<span style='color:yellow'>your current branch</span>
+</code></pre>
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+> MMT: Git Create MR With **Integration** And Push
 
-## Extension Settings
+<pre><code>
+    git checkout integartion
+    git reset --hard
+    git pull --rebase
+    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git commit 
+    git push origin HEAD:refs/for/fb_integration
+</code></pre>
+
+> MMT: Git Create MR With **Release** And Push
+
+<pre><code>
+    git checkout integartion
+    git reset --hard
+    git pull --rebase
+    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git commit 
+    git push origin HEAD:refs/for/fb_integration
+</code></pre>
+
+> MMT: Git Create MR With **Existing Branch** And Push
+
+<pre><code>
+    git checkout <span style='color:yellow'>existing branch</span>
+    git reset --hard
+    git pull --rebase
+    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git commit 
+    git push origin HEAD:refs/for/fb_integration
+</code></pre>
+
+> MMT: Git Create New Branch From **Release**
+
+<pre><code>
+    git checkout -b <span style='color:yellow'>new_branch_name</span>   release
+</code></pre>
+
+> MMT: Git Create New Branch From Existing Branch
+
+<pre><code>
+    git checkout -b <span style='color:yellow'>new_branch_name</span>   <span style='color:yellow'>existing_branch_name</span>
+</code></pre>
+
+<!-- ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
@@ -25,47 +76,14 @@ For example:
 This extension contributes the following settings:
 
 - `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- `myExtension.thing`: Set to `blah` to do something. -->
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of basic commands
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Open to suggestions and requests**
