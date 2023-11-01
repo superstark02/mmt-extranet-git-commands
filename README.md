@@ -2,6 +2,8 @@
 
 This extension combines git commands to avoid mistakes in handling git.
 
+![Alt Text](./demo.gif)
+
 ## Commands
 
 The commands are described below:
