@@ -12,8 +12,8 @@ The commands are described below:
 
 <pre><code>
     git add .
-    git commit -m <span style='color:yellow'>your message</span>
-    git push origin HEAD:refs/for/<span style='color:yellow'>your current branch</span>
+    git commit -m <span style='color:#2196f3'>your message</span>
+    git push origin HEAD:refs/for/<span style='color:#2196f3'>your current branch</span>
 </code></pre>
 
 > MMT: Git Amend Commit And Push
@@ -21,7 +21,7 @@ The commands are described below:
 <pre><code>
     git add .
     git commit --amend
-    git push origin HEAD:refs/for/<span style='color:yellow'>your current branch</span>
+    git push origin HEAD:refs/for/<span style='color:#2196f3'>your current branch</span>
 </code></pre>
 
 > MMT: Git Create MR With **Integration** And Push
@@ -30,7 +30,7 @@ The commands are described below:
     git checkout integartion
     git reset --hard
     git pull --rebase
-    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
     git commit 
     git push origin HEAD:refs/for/fb_integration
 </code></pre>
@@ -41,7 +41,7 @@ The commands are described below:
     git checkout integartion
     git reset --hard
     git pull --rebase
-    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
     git commit 
     git push origin HEAD:refs/for/fb_integration
 </code></pre>
@@ -49,10 +49,10 @@ The commands are described below:
 > MMT: Git Create MR With **Existing Branch** And Push
 
 <pre><code>
-    git checkout <span style='color:yellow'>existing branch</span>
+    git checkout <span style='color:#2196f3'>existing branch</span>
     git reset --hard
     git pull --rebase
-    git merge origin/<span style='color:yellow'>your current branch</span> --no-ff --no-commit
+    git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
     git commit 
     git push origin HEAD:refs/for/fb_integration
 </code></pre>
@@ -60,14 +60,20 @@ The commands are described below:
 > MMT: Git Create New Branch From **Release**
 
 <pre><code>
-    git checkout -b <span style='color:yellow'>new_branch_name</span>   release
+    git checkout -b <span style='color:#2196f3'>new_branch_name</span>   release
 </code></pre>
 
 > MMT: Git Create New Branch From Existing Branch
 
 <pre><code>
-    git checkout -b <span style='color:yellow'>new_branch_name</span>   <span style='color:yellow'>existing_branch_name</span>
+    git checkout -b <span style='color:#2196f3'>new_branch_name</span>   <span style='color:#2196f3'>existing_branch_name</span>
 </code></pre>
+
+> MMT: Find Console logs
+
+Run it before staging all the changes.
+
+Finds 'console' word in all the unstaged files. Then open those files in your workspace.
 
 <!-- ## Extension Settings
 
