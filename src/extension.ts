@@ -8,7 +8,7 @@ import {
   gitMergeInRelease,
   gitPushNewCommit,
 } from "./git-commands";
-import { debugCommand } from "./console-log";
+import { findConsoleLogs } from "./console-log";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitPushNewCommit);
@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitMergeInExisingBranch);
   context.subscriptions.push(gitCreateNewBranchFromRelease);
   context.subscriptions.push(gitCreateNewBranch);
-  context.subscriptions.push(debugCommand);
+  context.subscriptions.push(findConsoleLogs);
 }
 
 export function deactivate() {}

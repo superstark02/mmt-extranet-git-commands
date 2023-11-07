@@ -12,6 +12,7 @@ export const strings = {
   branch_placeholder_source: "Please enter source branch",
   branch_placeholder_new: "Please enter new branch",
   getting_branch: "Getting branch name",
+  no_changes_found: "No changes registered",
 };
 
 export const pathToBranch = "origin HEAD:refs/for/";
@@ -25,3 +26,5 @@ export const messageTypes = {
   branch: "branch",
   message: "message",
 };
+
+export const console = "console";

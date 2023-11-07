@@ -48,8 +48,8 @@
         "title": "MMT: Git Create New Branch From Custom Branch"
       },
       {
-        "command": "mmt-extranet-git-commands.debug_cmd",
-        "title": "MMT: Debug command"
+        "command": "mmt-extranet-git-commands.find_console_logs",
+        "title": "MMT: Show Console Logs"
       }
     ]
   },
