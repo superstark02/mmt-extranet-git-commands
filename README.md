@@ -88,9 +88,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.2
+### 0.0.3
 
-Updated docs
+Console log finding feature added
 
 ---
 
