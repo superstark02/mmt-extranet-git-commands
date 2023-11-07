@@ -10,7 +10,7 @@
   "icon": "./icon.png",
   "version": "0.0.2",
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.83.0"
   },
   "categories": [
     "Other"
@@ -46,6 +46,10 @@
       {
         "command": "mmt-extranet-git-commands.git_create_new_branch",
         "title": "MMT: Git Create New Branch From Custom Branch"
+      },
+      {
+        "command": "mmt-extranet-git-commands.debug_cmd",
+        "title": "MMT: Debug command"
       }
     ]
   },

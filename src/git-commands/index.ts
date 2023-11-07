@@ -81,7 +81,7 @@ export const gitMergeInExisingBranch = commands.registerCommand(
   "mmt-extranet-git-commands.git_merge_in_existing_branch",
   () => {
     getCurrentBranch((branch: string) => {
-      takeInput(strings.branch_placeholder, '', (existing_branch: string) => {
+      takeInput(strings.branch_placeholder, "", (existing_branch: string) => {
         sendCommands([
           git_commands.git_checkout(existing_branch),
           git_commands.git_reset_hard,
