@@ -50,6 +50,10 @@
       {
         "command": "mmt-extranet-git-commands.find_console_logs",
         "title": "MMT: Show Console Logs"
+      },
+      {
+        "command": "mmt-extranet-git-commands.trim_strings",
+        "title": "MMT: Trim strings"
       }
     ]
   },

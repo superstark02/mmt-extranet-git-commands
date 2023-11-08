@@ -9,6 +9,7 @@ import {
   gitPushNewCommit,
 } from "./git-commands";
 import { findConsoleLogs } from "./console-log";
+import { trimStrings } from "./trim-string";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitPushNewCommit);
@@ -19,6 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitCreateNewBranchFromRelease);
   context.subscriptions.push(gitCreateNewBranch);
   context.subscriptions.push(findConsoleLogs);
+  context.subscriptions.push(trimStrings);
 }
 
 export function deactivate() {}

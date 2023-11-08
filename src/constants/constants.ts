@@ -13,6 +13,7 @@ export const strings = {
   branch_placeholder_new: "Please enter new branch",
   getting_branch: "Getting branch name",
   no_changes_found: "No changes registered",
+  no_file_opened: "No text editor opened.",
 };
 
 export const pathToBranch = "origin HEAD:refs/for/";
