@@ -21,11 +21,6 @@ export const gitPushNewCommit = commands.registerCommand(
       );
       return;
     });
-
-    // takeInput((value: string) => {
-    //   execCommand(gitPushNewCommitCmd(value), strings.pushed_new_commit);
-    //   return;
-    // });
   }
 );
 
@@ -44,6 +39,26 @@ export const gitAmendCommit = commands.registerCommand(
   }
 );
 
+export const gitAmendCommitWithMessage = commands.registerCommand(
+  "mmt-extranet-git-commands.git_amend_with_msg_commit",
+  () => {
+    getCurrentBranch((branch: string) => {
+      takeInput(
+        strings.message_placeholder,
+        branch + " | ",
+        (message: string) => {
+          sendCommands([
+            git_commands.git_add,
+            git_commands.git_ammend_message(message),
+            git_commands.git_push_b(branch),
+          ]);
+        }
+      );
+    });
+    return;
+  }
+);
+
 export const gitMergeInRelease = commands.registerCommand(
   "mmt-extranet-git-commands.git_merge_in_release",
   () => {
@@ -53,7 +68,8 @@ export const gitMergeInRelease = commands.registerCommand(
           git_commands.git_checkout(branchNames.release),
           git_commands.git_reset_hard,
           git_commands.git_pull_rebase,
-          git_commands.git_merge(branch),
+          git_commands.git_merge_no_ff_no_commit(branch),
+          git_commands.git_push_b(branchNames.release),
         ]);
       });
     });
@@ -69,8 +85,8 @@ export const gitMergeInIntegration = commands.registerCommand(
           git_commands.git_checkout(branchNames.integration),
           git_commands.git_reset_hard,
           git_commands.git_pull_rebase,
-          git_commands.git_merge(branch),
-          //to do -> add push cmd
+          git_commands.git_merge_no_ff_no_commit(branch),
+          git_commands.git_push_b(branchNames.integration),
         ]);
       });
     });
@@ -86,8 +102,8 @@ export const gitMergeInExisingBranch = commands.registerCommand(
           git_commands.git_checkout(existing_branch),
           git_commands.git_reset_hard,
           git_commands.git_pull_rebase,
-          git_commands.git_merge(branch),
-          //to do -> add push cmd
+          git_commands.git_merge_no_ff_no_commit(branch),
+          git_commands.git_push_b(existing_branch),
         ]);
       });
     });

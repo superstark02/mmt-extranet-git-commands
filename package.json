@@ -28,6 +28,10 @@
         "title": "MMT: Git Amend Commit And Push"
       },
       {
+        "command": "mmt-extranet-git-commands.git_amend_with_msg_commit",
+        "title": "MMT: Git Amend With New Message And Push"
+      },
+      {
         "command": "mmt-extranet-git-commands.git_merge_in_release",
         "title": "MMT: Git Merge This Branch With Release And Push"
       },
