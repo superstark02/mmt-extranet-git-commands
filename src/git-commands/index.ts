@@ -64,13 +64,20 @@ export const gitMergeInRelease = commands.registerCommand(
   () => {
     getCurrentBranch((branch: string) => {
       takeInput(strings.branch_placeholder, branch, (branch: string) => {
-        sendCommands([
-          git_commands.git_checkout(branchNames.release),
-          git_commands.git_reset_hard,
-          git_commands.git_pull_rebase,
-          git_commands.git_merge_no_ff_no_commit(branch),
-          git_commands.git_push_b(branchNames.release),
-        ]);
+        takeInput(
+          strings.message_placeholder,
+          branch + " | ",
+          (message: string) => {
+            sendCommands([
+              git_commands.git_checkout(branchNames.release),
+              git_commands.git_reset_hard,
+              git_commands.git_pull_rebase,
+              git_commands.git_merge_no_ff_no_commit(branch),
+              git_commands.git_commit_m(message),
+              git_commands.git_push_b(branchNames.release),
+            ]);
+          }
+        );
       });
     });
   }
