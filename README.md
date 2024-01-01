@@ -24,11 +24,19 @@ The commands are described below:
     git push origin HEAD:refs/for/<span style='color:#2196f3'>your current branch</span>
 </code></pre>
 
+<!-- > MMT: Git Amend Commit With New Message And Push
+
+<pre><code>
+    git add .
+    git commit --amend -m "<span style='color:#2196f3'>your message</span>"
+    git push origin HEAD:refs/for/<span style='color:#2196f3'>your current branch</span>
+</code></pre> -->
+
 > MMT: Git Create MR With **Integration** And Push
 
 <pre><code>
     git checkout integartion
-    git reset --hard
+    git reset --hard origin/fb_integration
     git pull --rebase
     git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
     git commit 
@@ -39,35 +47,23 @@ The commands are described below:
 
 <pre><code>
     git checkout integartion
-    git reset --hard
+    git reset --hard origin/release
     git pull --rebase
     git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
     git commit 
     git push origin HEAD:refs/for/fb_integration
 </code></pre>
 
-> MMT: Git Create MR With **Existing Branch** And Push
+<!-- > MMT: Git Create MR With **Existing Branch** And Push
 
 <pre><code>
     git checkout <span style='color:#2196f3'>existing branch</span>
     git reset --hard
     git pull --rebase
     git merge origin/<span style='color:#2196f3'>your current branch</span> --no-ff --no-commit
-    git commit 
+    git commit
     git push origin HEAD:refs/for/fb_integration
-</code></pre>
-
-> MMT: Git Create New Branch From **Release**
-
-<pre><code>
-    git checkout -b <span style='color:#2196f3'>new_branch_name</span>   release
-</code></pre>
-
-> MMT: Git Create New Branch From Existing Branch
-
-<pre><code>
-    git checkout -b <span style='color:#2196f3'>new_branch_name</span>   <span style='color:#2196f3'>existing_branch_name</span>
-</code></pre>
+</code></pre> -->
 
 > MMT: Find Console logs
 
@@ -88,9 +84,9 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.3
+### 0.0.4
 
-Console log finding feature added
+Keeping main commands, removing extra features
 
 ---
 

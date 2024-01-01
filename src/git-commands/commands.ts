@@ -8,7 +8,7 @@ export const git_commands = {
   git_commit_a: "git commit --amend --no-edit",
   git_ammend_message: (message: string) => `git commit --amend -m "${message}"`,
   git_checkout: (branch: string) => `git checkout ${branch}`,
-  git_reset_hard: "git reset --hard",
+  git_reset_hard: (branch: string) => `git reset --hard ${branch}`,
   git_pull_rebase: "git pull --rebase",
   git_merge_no_ff_no_commit: (branch: string) =>
     `git merge ${branch} --no-ff --no-commit`,

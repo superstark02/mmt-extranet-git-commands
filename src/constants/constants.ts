@@ -14,6 +14,7 @@ export const strings = {
   getting_branch: "Getting branch name",
   no_changes_found: "No changes registered",
   no_file_opened: "No text editor opened.",
+  reset_to_commit: "Paste url to reset to commit",
 };
 
 export const pathToBranch = "origin HEAD:refs/for/";

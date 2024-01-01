@@ -7,6 +7,7 @@ import {
   gitMergeInIntegration,
   gitMergeInRelease,
   gitPushNewCommit,
+  gitUpdatePatchsetIntegration,
 } from "./git-commands";
 import { findConsoleLogs } from "./console-log";
 import { trimStrings } from "./trim-string";
@@ -14,11 +15,13 @@ import { trimStrings } from "./trim-string";
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(gitPushNewCommit);
   context.subscriptions.push(gitAmendCommit);
+  //context.subscriptions.push(gitAmendCommitWithMessage);
   context.subscriptions.push(gitMergeInRelease);
   context.subscriptions.push(gitMergeInIntegration);
-  context.subscriptions.push(gitMergeInExisingBranch);
-  context.subscriptions.push(gitCreateNewBranchFromRelease);
-  context.subscriptions.push(gitCreateNewBranch);
+  //context.subscriptions.push(gitUpdatePatchsetIntegration);
+  //context.subscriptions.push(gitMergeInExisingBranch);
+  //context.subscriptions.push(gitCreateNewBranchFromRelease);
+  //context.subscriptions.push(gitCreateNewBranch);
   context.subscriptions.push(findConsoleLogs);
   context.subscriptions.push(trimStrings);
 }

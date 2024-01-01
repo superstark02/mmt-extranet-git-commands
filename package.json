@@ -8,7 +8,7 @@
   "displayName": "MMT-Extranet-Git-Commands",
   "description": "An extension to make git handling simpler",
   "icon": "./icon.png",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -28,28 +28,12 @@
         "title": "MMT: Git Amend Commit And Push"
       },
       {
-        "command": "mmt-extranet-git-commands.git_amend_with_msg_commit",
-        "title": "MMT: Git Amend With New Message And Push"
-      },
-      {
         "command": "mmt-extranet-git-commands.git_merge_in_release",
         "title": "MMT: Git Merge This Branch With Release And Push"
       },
       {
         "command": "mmt-extranet-git-commands.git_merge_in_integration", 
         "title": "MMT: Git Merge This Branch With Integration And Push"
-      },
-      {
-        "command": "mmt-extranet-git-commands.git_merge_in_existing_branch",
-        "title": "MMT: Git Merge This Branch With Other Branch"
-      },
-      {
-        "command": "mmt-extranet-git-commands.git_create_new_branch_from_release",
-        "title": "MMT: Git Create New Branch from Release"
-      },
-      {
-        "command": "mmt-extranet-git-commands.git_create_new_branch",
-        "title": "MMT: Git Create New Branch From Custom Branch"
       },
       {
         "command": "mmt-extranet-git-commands.find_console_logs",
