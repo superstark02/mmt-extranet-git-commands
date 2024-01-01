@@ -84,7 +84,7 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.4
+### 0.0.5
 
 Keeping main commands, removing extra features
 
